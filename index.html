@@ -4,44 +4,82 @@
 <head>
   <meta charset="utf-8">
   <title>Smile Kels</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="forkelso.css"> <!--Bootstrap & CSS linked-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <button id="cat-button">magical cat button</button>
-  <div id="images">
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    //Linked jquery- then created an onclick event listener
-    $("#cat-button").on("click", function() {
+  <!-- NAVBAR -->
+  <div class= "container-fluid fixed-top"> 
+      <div class="row" id="navRow">
 
-      //Jquery --> string, what we will submit to the api
-      var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cats";
+                  <div class="col-sm-2 my-col offset-sm-2">
+                      <div>Kelsey</div>
+                  </div>
 
-      //making an api request 
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      })
+                  <div class= "col-sm-4 blank-col"></div>
 
-      //.then= waits until the response comes back then run function 
-        .then(function(response) {
+                  <div class= "col-sm-1 nav-col">
+                      <div class="navLink"><a href="#">You and I</a></div>
+                  </div>
 
-        //using dot notation to traverse the "object" using JSON- the image url
-          var imageUrl = response.data.image_original_url;
+                  <div class= "col-sm-1 nav-col">
+                      <div class="navLink"><a href="#">Random</a></div> 
+                  </div>
 
-          //creating an image dive
-          var catImage = $("<img>");
+              <div class= "col-sm-2 blank-col"></div>
+      </div> <!--ROW END-->
 
-          //adding an attributes to the image div-
-          catImage.attr("src", imageUrl);
-          catImage.attr("alt", "cat image");
 
-          //putting the cat image on to the page inside the image div
-          $("#images").prepend(catImage);
-        });
-    });
-  </script>
+<div class="row"> <!--Magic cat button row-->
+       <button type="button" id="cat-button" class="btn btn-primary btn-lg btn-block">Magical Cat Button</button>
+        <!-- <button id="cat-button">Magical Cat Button</button> -->
+
+  <div id="images"></div> <!--Prepend images here-->
+</div>
+
+<div class= "container-fluid" id="bodybox">
+    <div class= "row">
+     <div class= "col-sm-8 offset-sm-2">
+        <div class="card">
+            <div class="card-body">
+
+                          <div id="me-text">US *LAME TEXT HERE* - put img</div>
+
+                          <div class= "position-relative textc">
+
+                                  <img class= "float-left img" src= "#" height= "250px" width= "250px"> 
+                              <div class= "BodyFont">
+                                  
+                                <p> <!--Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, 
+                                    I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. 
+                                    Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. -->
+                                </p>
+
+                                  <p> <!--Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, 
+                                    I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. 
+                                    Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. -->
+                                </p>
+                  
+                                  <p> <!--Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, 
+                                      I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. 
+                                      Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass. -->
+                                  </p>
+
+                    </div> <!--BODYFONT DIV-->
+                </div>
+              </div> <!--CARD BODY DIV-->
+            </div>  <!--CARD DIV-->
+        </div> <!--MAIN BODY COLUMN DIV-->
+    </div> <!--ROW DIV-->
+        <div class=col-sm-2></div>
+</div> <!--container DIV-->
+
+  
+  <script src="forkelso.js"></script> <!--Linked js file-->
+
+  </div> <!--CONTAINER END-->
 </body>
 
 </html>
