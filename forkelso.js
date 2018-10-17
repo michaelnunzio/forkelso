@@ -11,6 +11,8 @@ $("#cat-button").on("click", function() {
 
     //.then= waits until the response comes back then run function 
       .then(function(response) {
+        console.log(response)
+        
 
       //using dot notation to traverse the "object" using JSON- the image url
         var imageUrl = response.data.image_original_url;
